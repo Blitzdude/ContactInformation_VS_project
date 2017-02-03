@@ -2,6 +2,7 @@
 #include <map>
 #include <iostream>
 
+
 using namespace std;
 int main() {
 
@@ -43,7 +44,20 @@ int main() {
 
 		// add contact information
 		else if (input == 'a' || input == 'A') { 
+			string c_name;
+			string c_phoneNum;
+			string c_email;
 
+			// ask name
+			cout << "Insert name: "; 
+			getline(cin, c_name);
+			cout << "\nInsert phone number: ";
+			getline(cin, c_phoneNum);
+			cout << "\nInsert email: ";
+			getline(cin, c_email);
+
+			ContactInfo *ptr = new ContactInfo(c_name, c_phoneNum, c_email);
+			friendList.insert(make_pair(c_name, *ptr));
 		}
 
 		// quit application
