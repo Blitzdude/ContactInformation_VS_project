@@ -6,6 +6,7 @@ using namespace std;
 int main() {
 
 	map<string, ContactInfo> friendList;
+	
 
 	ContactInfo friend1 = { "Fred Fucs", "1800-EATADICK", "fredfucs@assmail.org" };
 	ContactInfo friend2 = { "Harry Mason", "04003331234", "harrymason@whereissheryl.com" };
@@ -15,9 +16,41 @@ int main() {
 	friendList.insert(make_pair("Harry Mason", friend2));
 	friendList.insert(make_pair("Bruce Wayne", friend3));
 
+	char input;
 	bool quit = false;
+
+	cout << "Welcome to your Contact information list!\n\n";
+
 	while (quit != true) {
+		cout << "What would you like to do? > ";
+		cin >> input;
 		
+		// Print all contacts
+		if (input == 'p' || input == 'P') { // print
+			map<string, ContactInfo>::iterator map_it = friendList.begin();
+
+			while (map_it != friendList.end()) {
+
+				// map_it on pointteri, joten -> operaattori.
+				map_it->second.print();		//(string, ContactInfo <--)
+				map_it++;
+			}
+		}
+		// Find contact using keyword
+		else if (input == 'f' || input == 'F') { 
+
+		}
+
+		// add contact information
+		else if (input == 'a' || input == 'A') { 
+
+		}
+
+		// quit application
+		else if (input == 'q' || input == 'Q') { 
+			cout << "Goodbye" << endl;
+			quit = true;
+		}
 	}
 	return 0;
 }
