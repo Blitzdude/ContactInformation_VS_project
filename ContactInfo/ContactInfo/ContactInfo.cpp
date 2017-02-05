@@ -9,14 +9,10 @@ ContactInfo::ContactInfo
 
 ContactInfo::~ContactInfo() {}
 
-void ContactInfo::addContactInfo() {
-}
+
 
 void ContactInfo::print() {
 	std::cout << "name: " << _name << ", Phone Number: "
 			  << _phoneNum << ", email: " << _email << std::endl;
 }
 
-void ContactInfo::findContactInfo() {
-
-}

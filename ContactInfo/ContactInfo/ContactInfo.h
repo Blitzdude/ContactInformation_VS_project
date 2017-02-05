@@ -10,10 +10,7 @@ public:
 				std::string email);
 
 	~ContactInfo();
-
-	void addContactInfo();
 	void print();
-	void findContactInfo();
 
 	std::string getName() {
 		return _name;
